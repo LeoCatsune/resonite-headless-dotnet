@@ -35,6 +35,8 @@ RUN	sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
 	rm -rf /var/lib/{apt,dpkg,cache}
 
 ENV	LANG=en_GB.UTF-8
+ENV HOME="${HOMEDIR}"
+#*(leocatsune) dotnet container does not provide HOME by default?
 
 # Fix the LetsEncrypt CA cert
 RUN	sed -i 's#mozilla/DST_Root_CA_X3.crt#!mozilla/DST_Root_CA_X3.crt#' /etc/ca-certificates.conf && update-ca-certificates

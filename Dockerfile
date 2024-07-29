@@ -32,7 +32,7 @@ RUN	sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
 	update-locale LANG=en_GB.UTF-8 && \
 	rm -rf /var/lib/{apt,dpkg,cache}
 
-ENV	LANG en_GB.UTF-8
+ENV	LANG=en_GB.UTF-8
 
 # Fix the LetsEncrypt CA cert
 RUN	sed -i 's#mozilla/DST_Root_CA_X3.crt#!mozilla/DST_Root_CA_X3.crt#' /etc/ca-certificates.conf && update-ca-certificates

@@ -19,7 +19,9 @@ RUN	set -x && \
 	apt-get -y update && \
 	apt-get -y upgrade && \
 	apt-get -y install curl lib32gcc-s1 libopus-dev libopus0 opus-tools libc-dev && \
-	rm -rf /var/lib/{apt,dpkg,cache}
+	rm -rf /var/lib/{apt,cache}
+#?(leocatsune) ^^ Why are we doing this, anyway?
+#*(leocatsune) Removed dpkg because it was causing build errors, left the rest.
 
 # Add locales
 RUN	apt-get update && \

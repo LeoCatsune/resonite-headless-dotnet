@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker build -t leocatsune/resonite-headless-dotnet .
+docker build -t ghcr.io/leocatsune/resonite-headless-dotnet .

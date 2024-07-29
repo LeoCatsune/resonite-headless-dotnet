@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
     - name: resonite-headless
-      image: leocatsune/resonite-headless-dotnet
+      image: ghcr.io/leocatsune/resonite-headless-dotnet
       env:
         - name: STEAMBETA
           valueFrom:

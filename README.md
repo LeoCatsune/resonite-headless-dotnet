@@ -14,7 +14,7 @@ Sample docker-compose:
 version: "3.3"
 services:
   resonite:
-    image: leocatsune/resonite-headless-dotnet:latest
+    image: ghcr.io/leocatsune/resonite-headless-dotnet:latest
     container_name: resonite-headless
     tty: true
     stdin_open: true

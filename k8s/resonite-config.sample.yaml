@@ -53,4 +53,5 @@ data:
   STEAMBETA: headless
   STEAMBETAPASSWORD: getThisFromResoniteBot
   STEAMLOGIN: your_steam_account_name andPassword
+  ENABLE_MODLOADER: false
 kind: ConfigMap

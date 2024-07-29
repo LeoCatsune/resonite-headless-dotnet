@@ -1,6 +1,6 @@
-FROM mono
+FROM bitnami/dotnet:8
 
-LABEL name=resonite-headless org.opencontainers.image.authors="panther.ru@gmail.com"
+LABEL name=resonite-headless org.opencontainers.image.authors="git@leocatto.com"
 
 ENV	STEAMAPPID=2519830 \
 	STEAMAPP=resonite \
@@ -10,7 +10,8 @@ ENV	STEAMAPPID=2519830 \
 	STEAMBETAPASSWORD=__CHANGEME__ \
 	STEAMLOGIN=__CHANGEME__ \
 	USER=1000 \
-	HOMEDIR=/home/steam
+	HOMEDIR=/home/steam \
+	ENABLE_MODLOADER=false
 ENV	STEAMAPPDIR="${HOMEDIR}/${STEAMAPP}-headless"
 
 # Prepare the basic environment

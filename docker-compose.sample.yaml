@@ -1,7 +1,7 @@
 version: "3.3"
 services:
   resonite:
-    image: shadowpanther/resonite-headless:latest
+    image: leocatsune/resonite-headless-dotnet:latest
     container_name: resonite-headless
     tty: true
     stdin_open: true
@@ -9,6 +9,7 @@ services:
       STEAMBETA: headless
       STEAMBETAPASSWORD: CHANGEME
       STEAMLOGIN: "USER PASSWORD"
+      ENABLE_MODLOADER: false
     volumes:
       - "./Config:/Config:ro"
       - "./Logs:/Logs"

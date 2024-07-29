@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker build -t shadowpanther/resonite-headless .
+docker build -t leocatsune/resonite-headless-dotnet .

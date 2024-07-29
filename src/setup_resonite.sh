@@ -10,4 +10,13 @@ find ${STEAMAPPDIR}/Data/Assets -type f -atime +7 -delete
 find ${STEAMAPPDIR}/Data/Cache -type f -atime +7 -delete
 find /Logs -type f -name *.log -atime +30 -delete
 mkdir -p Headless/Migrations
+
+# RML & 0Harmony
+mkdir -p ${STEAMAPPDIR}/Libraries
+mkdir -p ${STEAMAPPDIR}/rml_libs
+mkdir -p ${STEAMAPPDIR}/rml_mods
+curl -sSL -o ${STEAMAPPDIR}/Libraries/ResoniteModLoader.dll https://github.com/resonite-modding-group/ResoniteModLoader/releases/latest/download/ResoniteModLoader.dll
+curl -sSL -o ${STEAMAPPDIR}/rml_libs/0Harmony.dll https://github.com/resonite-modding-group/ResoniteModLoader/releases/latest/download/0Harmony.dll
+# ----------
+
 exec $*

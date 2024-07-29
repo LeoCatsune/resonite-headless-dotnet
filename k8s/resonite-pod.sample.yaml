@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
     - name: resonite-headless
-      image: shadowpanther/resonite-headless
+      image: leocatsune/resonite-headless-dotnet
       env:
         - name: STEAMBETA
           valueFrom:
@@ -22,6 +22,11 @@ spec:
             configMapKeyRef:
               name: resonite-config
               key: STEAMLOGIN
+        - name: ENABLE_MODLOADER
+          valueFrom:
+            configMapKeyRef:
+              name: resonite-config
+              key: ENABLE_MODLOADER
       volumeMounts:
         - name: config-vol
           mountPath: /Config

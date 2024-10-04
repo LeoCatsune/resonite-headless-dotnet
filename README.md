@@ -10,7 +10,7 @@ Sample docker-compose:
 version: "3.3"
 services:
   resonite:
-    image: shadowpanther/resonite-headless:latest
+    image: ghcr.io/leocatsune/resonite-headless-dotnet:latest
     container_name: resonite-headless
     tty: true
     stdin_open: true
@@ -25,7 +25,7 @@ services:
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
 volumes:
-  resonite-data:
+    resonite-data:
 ```
 
 Place your `Config.json` into `Config` folder. Logs would be stored in `Logs` folder.
